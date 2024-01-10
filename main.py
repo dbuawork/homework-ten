@@ -58,3 +58,25 @@ result2 = validate_email(email2)
 
 print(f"Результат для {email1}: {result1}")  # Очікується True
 print(f"Результат для {email2}: {result2}")  # Очікується False
+
+# Пароль
+
+def validate_password(password):
+    # Регулярний вираз для перевірки пароля
+    pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$'
+
+    # Перевірка відповідності регулярному виразу
+    return bool(re.match(pattern, password))
+
+# Приклад використання:
+password1 = "StrongP@ssw0rd"
+password2 = "weakpassword"
+password3 = "NoDigitSymbol"
+
+result1 = validate_password(password1)
+result2 = validate_password(password2)
+result3 = validate_password(password3)
+
+print(f"Результат для {password1}: {result1}")  # Очікується True
+print(f"Результат для {password2}: {result2}")  # Очікується False
+print(f"Результат для {password3}: {result3}")  # Очікується Fals
