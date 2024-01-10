@@ -80,3 +80,5 @@ result3 = validate_password(password3)
 print(f"Результат для {password1}: {result1}")  # Очікується True
 print(f"Результат для {password2}: {result2}")  # Очікується False
 print(f"Результат для {password3}: {result3}")  # Очікується Fals
+
+################################
