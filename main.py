@@ -37,3 +37,24 @@ result3 = validate_mobile_phone(phone_number3)
 print(f"Результат для {phone_number1}: {result1}")  # Очікується True
 print(f"Результат для {phone_number2}: {result2}")  # Очікується True
 print(f"Результат для {phone_number3}: {result3}")  # Очікується False
+
+# Email
+
+def validate_email(email):
+    # Регулярний вираз для перевірки електронної адреси
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]'
+
+    # Перевірка відповідності регулярному виразу
+    return bool(re.match(pattern, email))
+
+# Приклад використання:
+email1 = "user@example.com"
+email2 = "invalid-email" # Невірний домен
+
+
+result1 = validate_email(email1)
+result2 = validate_email(email2)
+
+
+print(f"Результат для {email1}: {result1}")  # Очікується True
+print(f"Результат для {email2}: {result2}")  # Очікується False
